@@ -1,4 +1,4 @@
-# AssignmentAI
+# BroDoMyWork
 
 <p align="center">
   <img src="./docs/logo.png" alt="BroDoMyWork logo" width="720" />
@@ -13,6 +13,18 @@
 </p>
 
 ---
+
+## About the project
+
+**BroDoMyWork** is a full‑stack app that generates a **handwritten-looking assignment PDF** from a PDF/image you upload.
+It’s built as a simple guided workflow (upload → pick paper & handwriting → add your info → generate → download).
+
+### Why it’s useful
+
+- **Works for both digital + scanned PDFs**: uses embedded text when available, otherwise renders pages and runs OCR.
+- **Configurable output**: choose paper template, handwriting font, subject, difficulty level, and writing style.
+- **End-to-end in one click**: once generation completes, you download the final PDF from the backend.
+- **Poppler-free**: PDF rendering uses PyMuPDF, so you don’t need Poppler on your system.
 
 ## How it works
 
