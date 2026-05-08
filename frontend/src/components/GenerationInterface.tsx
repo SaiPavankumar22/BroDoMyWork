@@ -42,6 +42,14 @@ interface GenerationInterfaceProps {
   subject: string;
   difficultyLevel: string;
   writingStyle: string;
+  onGenerated?: (payload: {
+    sessionId: string;
+    pageCount: number;
+    previewImages: string[];
+    downloadUrl: string;
+    fontUsed?: string;
+    warnings?: string[];
+  }) => void;
 }
 
 const INITIAL_STEPS: StepState[] = [
@@ -64,6 +72,7 @@ export function GenerationInterface({
   subject,
   difficultyLevel,
   writingStyle,
+  onGenerated,
 }: GenerationInterfaceProps) {
   const [steps, setSteps] = useState<StepState[]>(INITIAL_STEPS);
   const [isExtracting, setIsExtracting] = useState(false);
@@ -258,6 +267,14 @@ export function GenerationInterface({
       setPreviewImages(renderResult.preview_images ?? []);
       setRenderWarnings(renderResult.warnings ?? []);
       setFontUsed(renderResult.font_used ?? '');
+      onGenerated?.({
+        sessionId,
+        pageCount: renderResult.page_count,
+        previewImages: renderResult.preview_images ?? [],
+        downloadUrl: getDownloadUrl(sessionId),
+        fontUsed: renderResult.font_used,
+        warnings: renderResult.warnings,
+      });
     } catch (caughtError) {
       const message = caughtError instanceof Error ? caughtError.message : 'Generation failed.';
       setError(message);

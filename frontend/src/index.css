@@ -6,27 +6,27 @@
 
 @layer base {
   :root {
-    --app-bg: #f7f1e8;
-    --app-text: #201813;
-    --panel: rgba(255, 252, 247, 0.88);
-    --panel-soft: rgba(255, 248, 239, 0.92);
-    --border: rgba(67, 41, 22, 0.14);
-    --muted: #6c5f56;
-    --accent: #e96725;
-    --accent-contrast: #fff8f3;
-    --track: rgba(103, 76, 59, 0.12);
+    --app-bg: #fff7b8;
+    --app-text: #111111;
+    --panel: rgba(255, 248, 187, 0.88);
+    --panel-soft: rgba(255, 242, 122, 0.92);
+    --border: rgba(17, 17, 17, 0.14);
+    --muted: #4d4300;
+    --accent: #111111;
+    --accent-contrast: #ffd400;
+    --track: rgba(17, 17, 17, 0.11);
   }
 
   .theme-dark {
-    --app-bg: #171411;
-    --app-text: #f8f1e6;
-    --panel: rgba(28, 24, 20, 0.88);
-    --panel-soft: rgba(36, 31, 26, 0.92);
-    --border: rgba(255, 239, 221, 0.11);
-    --muted: #c3b4a6;
-    --accent: #f1a14d;
-    --accent-contrast: #22170c;
-    --track: rgba(255, 239, 221, 0.1);
+    --app-bg: #080808;
+    --app-text: #fff7b8;
+    --panel: rgba(18, 18, 18, 0.9);
+    --panel-soft: rgba(33, 33, 33, 0.92);
+    --border: rgba(255, 212, 0, 0.18);
+    --muted: #d8c86a;
+    --accent: #ffd400;
+    --accent-contrast: #111111;
+    --track: rgba(255, 212, 0, 0.13);
   }
 
   * {
@@ -109,7 +109,7 @@
     border: 1px solid var(--border);
     border-radius: 28px;
     box-shadow:
-      0 16px 40px rgba(34, 24, 18, 0.08),
+      0 18px 42px rgba(17, 17, 17, 0.12),
       inset 0 1px 0 rgba(255, 255, 255, 0.24);
     backdrop-filter: blur(18px);
   }
